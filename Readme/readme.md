@@ -27,8 +27,8 @@ CP210x: [Link download và cài đặt](https://sparks.gogo.co.nz/ch340.html).
 CH340:  [Link download và cài đặt](https://sparks.gogo.co.nz/ch340.html).
 ## Hướng dẫn sử dụng Platform IO lập trình ESP32
 -- Tạo một dự án lập trình ESP32 với Platform IO.
-Chúng ta nhấn vào biểu tượng logo của Platform io, trong tab Quick Acccess nhấn Open. Vs code sẽ mở ra trang PIO Home.
--- Sau đó nhân vào New Project để tạo 1 dự án mới. Đặt tên dự án, Chọn KIT sử dụng, ở đây là board DOIT ESP32 DEV KIT (loại thường gặp nhất đó).
+Chúng ta nhấn vào biểu tượng logo của Platform io, trong tab Quick Acccess nhấn Open. Vs code sẽ mở ra trang PIO Home.  
+-- Sau đó nhân vào New Project để tạo 1 dự án mới. Đặt tên dự án, Chọn KIT sử dụng, ở đây là board DOIT ESP32 DEV KIT (loại thường gặp nhất đó).  
 Chọn Framwork là Arduino:
 
 ![example](3-adruino.jpg)
