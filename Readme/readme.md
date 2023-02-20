@@ -4,7 +4,7 @@
 **Ứng dụng trong dự án:** Lập trình vi điều khiển ESP32 cho End Devices và Gateway.
 
 [Link hướng dẫn chi tiết](https://khuenguyencreator.com/huong-dan-cai-dat-platform-io-lap-trinh-esp32/)
-##Cài đặt Visual Studio Code (VS Code)
+## Cài đặt Visual Studio Code (VS Code)
 Truy cập link: https://code.visualstudio.com/
 Download và Cài đặt như một software bình thường.
 ## Cài đặt Platform IO
@@ -84,7 +84,7 @@ Ngoài ra, trên cửa sổ thư viện, nếu bạn chọn tab Installation và
 
 ![example](platfomrio-thu-vien-5-513x400.png)
 
-##Build và Upload code cho ESP32 bằng Platform IO
+## Build và Upload code cho ESP32 bằng Platform IO
 Mình sẽ chọn một example huyền thoại là Blink Led trên Arduino IDE, copy đoạn code đó, sau đó paste vào VS code
 
 ![example](Screenshot_1-768x370.jpg)
@@ -99,7 +99,7 @@ Cắm mạch vào và nhấn Upload, nếu đến đoạn connecting mà vscode 
 ![example](Screenshot_3-768x130.jpg)
 
 Sau khi nạp xong, thì xem thành quả thôi!!!
-##2. Hercules Terminal
+## 2. Hercules Terminal
 **Ứng dụng trong dự án:** UART để hiển thị các dữ liệu truyền nhận được giữa End Devices và Gateway, hỗ trợ mô phỏng để kiểm tra dữ liệu.
 [Link hướng dẫn chi tiết](https://khuenguyencreator.com/huong-dan-hercules-terminal/)
 Hercules Terminal cũng như các phần mềm Terminal khác dùng để đọc chuỗi nhận được thông qua các cổng khác nhau trên máy tính.
@@ -112,7 +112,7 @@ Mở Terminal lên chọn Tab Serial – Name = Cổng COM mà bạn đang sử 
 
 Hướng dẫn Download và sử dụng Hercules Terminal 44
 Vậy là bạn có thể truyền nhận dữ liệu thông qua cổng COM rồi nhé.
-##3. Arduino
+## 3. Arduino
 **Ứng dụng trong dự án:** UART để hiển thị các dữ liệu truyền nhận được giữa End Devices và Gateway, hỗ trợ mô phỏng để kiểm tra dữ liệu theo thời gian.
 [Link hướng dẫn chi tiết](https://khuenguyencreator.com/bai-1-huong-dan-cai-dat-arduino-ide-va-cach-them-thu-vien/)
 **Bước 1:** Truy cập địa chỉ này để cài đặt [Arduino IDE](https://www.arduino.cc/pro/software-arduino-pro-ide/). Đây là nơi lưu trữ cũng như cập nhật các bản IDE của Arduino. Bấm vào mục **Windows ZIP file**  như hình minh họa.
@@ -148,7 +148,7 @@ Serial trên Adrunino có chế độ **Show Timestamp** để hiển thị th�
 ## 2. Gateway
 ## 3. Firebase
 ## 4. Triển khai Gateway để truyền nhận dữ liệu tương tác với Firebase
-##5. Triển khai App MIT Inventor để đọc và gửi dữ liệu tương tác với Firebase
+## 5. Triển khai App MIT Inventor để đọc và gửi dữ liệu tương tác với Firebase
 Nhóm em sẽ sử dụng App để phục vụ hai chức năng chính của hệ thống: 
 . Chức năng hiển thị trạng thái của Đèn và một số kịch bản như hiển thị nhiệt độ, trạng thái của cảm biến hồng ngoại, …
 +) Để có thể đọc được dữ liệu từ Firebase đến App, nhóm em sử dụng chức năng của một số khối sau để thực hiện: 
