@@ -51,22 +51,22 @@ Phần Text editor: là nơi viết code
 - **Thư mục Src:** Chứa Source code của chương trình, đây là nơi lưu trữ code và bạn sẽ code trên đó. File thực thi chính là: main.cpp
 **Ứng dụng trong dự án:** Lập trình vi điều khiển ESP32 cho End Devices và Gateway
 
-Trên thực tế, các bạn có thể Copy trực tiếp các đoạn code viết bằng Arduino IDE và Paste thẳng vào đây. Chỉ cần giữ **#include <Arduino.h>** là code cũng có thể chạy bình thường.
-Thế nên các dự án mà bạn viết bằng Arduino cũng đều có thể viết bằng VS code nhé.
-File platformio.ini là file cấu hình PlatformIO cho project của bạn. Nó hiển thị các thông tin như platform, board và framework được sử dụng. Bạn cũng có thể thêm các cấu hình khác như các thư viện được đưa vào, tùy chọn upload code, hay tốc độ truyền của Serial Monitor, đường dẫn thư viện và các cấu hình khác.
-Thực tế các bạn nên để nguyên.
-Nếu muốn thay đổi tốc độ baud của Serial Monitor có thể sử dụng lệnh: **monitor_speed = 115200**.
-Nếu muốn thêm đường dẫn của thư viện chúng ta dùng: lib_deps = E:/thuvien 
-Trong đó E:/thuvien là đường dẫn tới file thư viện bạn cài đặt
-## Cài đặt thư viện cho Platformio
-### Sử dụng công cụ Libraly trong Platformio
-- Làm theo quy trình dưới đây nếu bạn cần cài đặt thư viện trong PlatformIO IDE.
-- Nhấp vào biểu tượng Home để chuyển đến Trang chủ PlatformIO. Nhấp vào biểu tượng Libraries trên thanh bên trái.
-- Tìm kiếm thư viện bạn muốn cài đặt. Ví dụ Adafruit_BME280 .
+Trên thực tế, các bạn có thể Copy trực tiếp các đoạn code viết bằng Arduino IDE và Paste thẳng vào đây. Chỉ cần giữ **#include <Arduino.h>** là code cũng có thể chạy bình thường.  
+Thế nên các dự án mà bạn viết bằng Arduino cũng đều có thể viết bằng VS code nhé.   
+File platformio.ini là file cấu hình PlatformIO cho project của bạn. Nó hiển thị các thông tin như platform, board và framework được sử dụng. Bạn cũng có thể thêm các cấu hình khác như các thư viện được đưa vào, tùy chọn upload code, hay tốc độ truyền của Serial Monitor, đường dẫn thư viện và các cấu hình khác.  
+Thực tế các bạn nên để nguyên.  
+Nếu muốn thay đổi tốc độ baud của Serial Monitor có thể sử dụng lệnh: **monitor_speed = 115200**.  
+Nếu muốn thêm đường dẫn của thư viện chúng ta dùng: lib_deps = E:/thuvien   
+Trong đó E:/thuvien là đường dẫn tới file thư viện bạn cài đặt  
+## Cài đặt thư viện cho Platformio   
+### Sử dụng công cụ Libraly trong Platformio  
+- Làm theo quy trình dưới đây nếu bạn cần cài đặt thư viện trong PlatformIO IDE.  
+- Nhấp vào biểu tượng Home để chuyển đến Trang chủ PlatformIO. Nhấp vào biểu tượng Libraries trên thanh bên trái.  
+- Tìm kiếm thư viện bạn muốn cài đặt. Ví dụ Adafruit_BME280 .  
 
 ![example](platfomrio-thu-vien-3-602x400.png)
 
-Nhấp vào thư viện bạn muốn đưa vào dự án của mình. Sau đó, nhấp vào Add to Project.
+Nhấp vào thư viện bạn muốn đưa vào dự án của mình. Sau đó, nhấp vào Add to Project.  
 
 ![example](platfomrio-thu-vien-1.png)
 
@@ -75,7 +75,7 @@ Chọn dự án bạn muốn sử dụng thư viện.
 
 ![exapmle](platfomrio-thu-vien-2-669x400.png)
 
-Thao tác này sẽ thêm code định danh thư viện bằng cách sử dụng lid_depschỉ thị trên file platformio.ini . Nếu bạn mở file platformio.ini của dự án , nó sẽ trông nh thể hiện trong hình ảnh sau.
+Thao tác này sẽ thêm code định danh thư viện bằng cách sử dụng lid_depschỉ thị trên file platformio.ini . Nếu bạn mở file platformio.ini của dự án , nó sẽ trông nh thể hiện trong hình ảnh sau.  
 
 ![example](platfomrio-thu-vien-4-768x357.png)
 
@@ -105,18 +105,18 @@ Hercules Terminal cũng như các phần mềm Terminal khác dùng để đọc
 Trong bài viết này mình chỉ đề cập tới việc sử dụng cổng COM hay Serial để đọc và truyền dữ liệu
 Đầu tiên các bạn **Download** tại link:  [Hercules Terminal](https://www.fshare.vn/file/DI61DGWVGBXH?token=1676858630)
 **Truyền nhận Serial với Hercules Terminal**
-Mở Terminal lên chọn Tab Serial – Name = Cổng COM mà bạn đang sử dụng (ở đây mình đang dùng COM4), Baud set cho phù hợp với ứng dụng của bạn. Nhấn Open
+Mở Terminal lên chọn Tab Serial – Name = Cổng COM mà bạn đang sử dụng (ở đây mình đang dùng COM4), Baud set cho phù hợp với ứng dụng của bạn. Nhấn Open  
 
 ![example](H2-9.png)
 
-Hướng dẫn Download và sử dụng Hercules Terminal 44
-Vậy là bạn có thể truyền nhận dữ liệu thông qua cổng COM rồi nhé.
+Hướng dẫn Download và sử dụng Hercules Terminal 44  
+Vậy là bạn có thể truyền nhận dữ liệu thông qua cổng COM rồi nhé.  
 ## 3. Arduino
-**Ứng dụng trong dự án:** UART để hiển thị các dữ liệu truyền nhận được giữa End Devices và Gateway, hỗ trợ mô phỏng để kiểm tra dữ liệu theo thời gian.
-[Link hướng dẫn chi tiết](https://khuenguyencreator.com/bai-1-huong-dan-cai-dat-arduino-ide-va-cach-them-thu-vien/)
-**Bước 1:** Truy cập địa chỉ này để cài đặt [Arduino IDE](https://www.arduino.cc/pro/software-arduino-pro-ide/). Đây là nơi lưu trữ cũng như cập nhật các bản IDE của Arduino. Bấm vào mục **Windows ZIP file**  như hình minh họa.
+**Ứng dụng trong dự án:** UART để hiển thị các dữ liệu truyền nhận được giữa End Devices và Gateway, hỗ trợ mô phỏng để kiểm tra dữ liệu theo thời gian.  
+[Link hướng dẫn chi tiết](https://khuenguyencreator.com/bai-1-huong-dan-cai-dat-arduino-ide-va-cach-them-thu-vien/)  
+**Bước 1:** Truy cập địa chỉ này để cài đặt [Arduino IDE](https://www.arduino.cc/pro/software-arduino-pro-ide/). Đây là nơi lưu trữ cũng như cập nhật các bản IDE của Arduino. Bấm vào mục **Windows ZIP file**  như hình minh họa.  
 
-![example](1338_81220-1431420080-0-2015-05-12-21h45-54-1-789x400.png)
+![example](1338_81220-1431420080-0-2015-05-12-21h45-54-1-789x400.png)  
 
 Bạn sẽ được chuyển đến một trang mời quyền góp tiền để phát triển phần mềm cho Arduino, tiếp tục bấm **JUST DOWNLOAD** để bắt đầu tải.
 
@@ -131,7 +131,7 @@ Bạn sẽ được chuyển đến một trang mời quyền góp tiền để 
 
 ![example](1398_12320-1431518163-0-2015-05-13-18h55-51-333x400.png)
 
-Như vậy chúng ta đã cài đặt Arduino IDE xong.
+Như vậy chúng ta đã cài đặt Arduino IDE xong.  
 
 **Cài đặt Serial**
 Cài đặt **Port** truyền nhận dữ liệu (ở đây mình đang dùng COM5) và tốc độ truyền ở **Upload Speed**.
@@ -149,14 +149,14 @@ Serial trên Adrunino có chế độ **Show Timestamp** để hiển thị th�
 ## 4. Triển khai Gateway để truyền nhận dữ liệu tương tác với Firebase
 ## 5. Triển khai App MIT Inventor để đọc và gửi dữ liệu tương tác với Firebase
 Nhóm em sẽ sử dụng App để phục vụ hai chức năng chính của hệ thống: 
-. Chức năng hiển thị trạng thái của Đèn và một số kịch bản như hiển thị nhiệt độ, trạng thái của cảm biến hồng ngoại, …
-+) Để có thể đọc được dữ liệu từ Firebase đến App, nhóm em sử dụng chức năng của một số khối sau để thực hiện: 
+. Chức năng hiển thị trạng thái của Đèn và một số kịch bản như hiển thị nhiệt độ, trạng thái của cảm biến hồng ngoại, …  
++) Để có thể đọc được dữ liệu từ Firebase đến App, nhóm em sử dụng chức năng của một số khối sau để thực hiện:   
 
 ![example](anh1.png)
 
 +) Ở đây khi Database ở Firebase thay đổi khối “When FirebaseDB1. Data Changed” sẽ nhận được và đọc dữ liệu thay đổi đó.
-+) Sau đó khối “When FirebaseDB1. GotValue” sẽ đọc và hiển thị lên App dữ liệu vừa nhận được.
-+) Ví dụ như đây là trạng thái của đèn phòng khách được hiển thị trên App:
++) Sau đó khối “When FirebaseDB1. GotValue” sẽ đọc và hiển thị lên App dữ liệu vừa nhận được.  
++) Ví dụ như đây là trạng thái của đèn phòng khách được hiển thị trên App:  
 
 ![example](anh2.png)
 
@@ -164,13 +164,13 @@ Nhóm em sẽ sử dụng App để phục vụ hai chức năng chính của h�
 
 ![example](Ảnh3.png)
 
-. Chức năng điều khiển các thiết bị ví dụ như điều khiển bật/tắt đèn, điều khiển mức quạt và rèm theo kịch bản của hệ thống.
-+) Điều khiển bật/tắt đèn: Nhóm em sẽ điều khiển thông qua các nút nhấn có trên App với chức năng khi nút nhấn được nhấn sẽ gửi dữ liệu xuống Firebase rồi sau đó Firebase sẽ gửi dữ liệu đó xuống các thiết bị chấp hành. 
+. Chức năng điều khiển các thiết bị ví dụ như điều khiển bật/tắt đèn, điều khiển mức quạt và rèm theo kịch bản của hệ thống.  
++) Điều khiển bật/tắt đèn: Nhóm em sẽ điều khiển thông qua các nút nhấn có trên App với chức năng khi nút nhấn được nhấn sẽ gửi dữ liệu xuống Firebase rồi sau đó Firebase sẽ gửi dữ liệu đó xuống các thiết bị chấp hành.   
 
 ![example](Ảnh4.png)
 
-+) Điều khiển quạt/rèm: Ở đây nhóm em sẽ điều khiển thông qua thanh trượt có tên “Slider” trên App. Tương tự như nút nhấn, nếu giá trị thanh trượt thay đổi thì sẽ gửi dữ liệu đó về Firebase và Firebase sẽ gửi xuống các thiết bị chấp hành. 
-+) Ví dụ như ở đây nhóm em đang cho Rèm có 3 mức là 0/1/2 tương ứng với 3 kịch bản là OFF/ON1/ON2. Trong đó ON1 là mở 50% và ON2 là mở 100%. 
++) Điều khiển quạt/rèm: Ở đây nhóm em sẽ điều khiển thông qua thanh trượt có tên “Slider” trên App. Tương tự như nút nhấn, nếu giá trị thanh trượt thay đổi thì sẽ gửi dữ liệu đó về Firebase và Firebase sẽ gửi xuống các thiết bị chấp hành.   
++) Ví dụ như ở đây nhóm em đang cho Rèm có 3 mức là 0/1/2 tương ứng với 3 kịch bản là OFF/ON1/ON2. Trong đó ON1 là mở 50% và ON2 là mở 100%.   
 
 ![example](Ảnh5.png)
 
@@ -181,7 +181,7 @@ Nhóm em sẽ sử dụng App để phục vụ hai chức năng chính của h�
 ## 6. Điều khiển Local
 ### 6.1 Cơ sở lý thuyết
 #### 6.1.1 Web Server
-Web Server là nơi lưu trữ, xử lý và cung cấp các trang web đến các Web Client. Web Client là một trình duyệt trên Laptop và Smartphone. Giao tiếp giữa Client và Server diễn ra bằng 1 giao thức đặc biệt gọi là Giao thức truyền siêu văn bản (HTTP- Hypertext Transfer Protocol).
+Web Server là nơi lưu trữ, xử lý và cung cấp các trang web đến các Web Client. Web Client là một trình duyệt trên Laptop và Smartphone. Giao tiếp giữa Client và Server diễn ra bằng 1 giao thức đặc biệt gọi là Giao thức truyền siêu văn bản (HTTP- Hypertext Transfer Protocol).  
 
 ![example](Ảnh9.png)
 
