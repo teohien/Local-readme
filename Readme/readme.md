@@ -147,8 +147,8 @@ Serial trên Adrunino có chế độ **Show Timestamp** để hiển thị th�
 ## 2. Gateway
 ## 3. Firebase
 ## 4. Triển khai Gateway để truyền nhận dữ liệu tương tác với Firebase
-## 5. Triển khai App MIT Inventor để đọc và gửi dữ liệu tương tác với Firebase
-Nhóm em sẽ sử dụng App để phục vụ hai chức năng chính của hệ thống: 
+## 5. Triển khai App MIT Inventor để đọc và gửi dữ liệu tương tác với Firebase  
+Nhóm em sẽ sử dụng App để phục vụ hai chức năng chính của hệ thống:  
 . Chức năng hiển thị trạng thái của Đèn và một số kịch bản như hiển thị nhiệt độ, trạng thái của cảm biến hồng ngoại, …  
 +) Để có thể đọc được dữ liệu từ Firebase đến App, nhóm em sử dụng chức năng của một số khối sau để thực hiện:   
 
