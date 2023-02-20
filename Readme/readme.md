@@ -1,27 +1,27 @@
 
 #I. Cài đặt và sử dụng phầm mềm
 ## 1. Platform IO lập trình ESP32
-**Ứng dụng trong dự án:** Lập trình vi điều khiển ESP32 cho End Devices và Gateway
+**Ứng dụng trong dự án:** Lập trình vi điều khiển ESP32 cho End Devices và Gateway.
 
 [Link hướng dẫn chi tiết](https://khuenguyencreator.com/huong-dan-cai-dat-platform-io-lap-trinh-esp32/)
 ##Cài đặt Visual Studio Code (VS Code)
 Truy cập link: https://code.visualstudio.com/
-Download và Cài đặt như một software bình thường
+Download và Cài đặt như một software bình thường.
 ## Cài đặt Platform IO
 Trước khi cài Extension này, chúng ta cần cài đặt Python cho máy tính đã.
 
 ![example](1-python.png)
 
 Truy cập link: https://www.python.org/downloads/
-**Lưu ý**: Hãy tích chọn Add Python 3.8 to PATH để có thể run Python ở bất cứ đâu
-Sau đó mở VS code, chuyển đến tab Extension, trong ô tìm kiếm gõ **Platformio IDE**
-Nhấn cài đặt, sau khi cài đặt xong sẽ hiển thị như hình
+**Lưu ý**: Hãy tích chọn Add Python 3.8 to PATH để có thể run Python ở bất cứ đâu.
+Sau đó mở VS code, chuyển đến tab Extension, trong ô tìm kiếm gõ **Platformio IDE**.
+Nhấn cài đặt, sau khi cài đặt xong sẽ hiển thị như hình:
 
 ![example](download-platform.png)
 
 Restart lại VS code sau đó chờ cho tất cả các extension được load.
-Lưu ý: máy tính bạn cần phải có mạng nhé
-##Cài đặt Driver nạp cho mạch
+**Lưu ý:** máy tính bạn cần phải có mạng nhé.
+##Cài đặt Driver nạp cho mạch.
 Tùy vào trường hợp mạch bạn sử dụng IC UART nào, chúng ta sẽ cài đặt driver cho chip đó:
 Thường là 2 loại
 CP210x: [Link download và cài đặt](https://sparks.gogo.co.nz/ch340.html)
@@ -56,7 +56,7 @@ Trên thực tế, các bạn có thể Copy trực tiếp các đoạn code vi�
 Thế nên các dự án mà bạn viết bằng Arduino cũng đều có thể viết bằng VS code nhé.
 File platformio.ini là file cấu hình PlatformIO cho project của bạn. Nó hiển thị các thông tin như platform, board và framework được sử dụng. Bạn cũng có thể thêm các cấu hình khác như các thư viện được đưa vào, tùy chọn upload code, hay tốc độ truyền của Serial Monitor, đường dẫn thư viện và các cấu hình khác.
 Thực tế các bạn nên để nguyên.
-Nếu muốn thay đổi tốc độ baud của Serial Monitor có thể sử dụng lệnh: **monitor_speed = 115200**
+Nếu muốn thay đổi tốc độ baud của Serial Monitor có thể sử dụng lệnh: **monitor_speed = 115200**.
 Nếu muốn thêm đường dẫn của thư viện chúng ta dùng: lib_deps = E:/thuvien 
 Trong đó E:/thuvien là đường dẫn tới file thư viện bạn cài đặt
 ## Cài đặt thư viện cho Platformio
@@ -147,7 +147,8 @@ Như vậy chúng ta đã cài đặt Arduino IDE xong.
 ##5. Triển khai App MIT Inventor để đọc và gửi dữ liệu tương tác với Firebase
 Nhóm em sẽ sử dụng App để phục vụ hai chức năng chính của hệ thống: 
 - Chức năng hiển thị trạng thái của Đèn và một số kịch bản như hiển thị nhiệt độ, trạng thái của cảm biến hồng ngoại, …
-+) Để có thể đọc được dữ liệu từ Firebase đến App, nhóm em sử dụng chức năng của một số khối sau để thực hiện: ![example](anh1.png)
++) Để có thể đọc được dữ liệu từ Firebase đến App, nhóm em sử dụng chức năng của một số khối sau để thực hiện: 
+![example](anh1.png)
 +) Ở đây khi Database ở Firebase thay đổi khối “When FirebaseDB1. Data Changed” sẽ nhận được và đọc dữ liệu thay đổi đó.
 +) Sau đó khối “When FirebaseDB1. GotValue” sẽ đọc và hiển thị lên App dữ liệu vừa nhận được.
 +) Ví dụ như đây là trạng thái của đèn phòng khách được hiển thị trên App:
@@ -156,7 +157,8 @@ Nhóm em sẽ sử dụng App để phục vụ hai chức năng chính của h�
 ![example](Ảnh3.png)
 
 - Chức năng điều khiển các thiết bị ví dụ như điều khiển bật/tắt đèn, điều khiển mức quạt và rèm theo kịch bản của hệ thống.
-+) Điều khiển bật/tắt đèn: Nhóm em sẽ điều khiển thông qua các nút nhấn có trên App với chức năng khi nút nhấn được nhấn sẽ gửi dữ liệu xuống Firebase rồi sau đó Firebase sẽ gửi dữ liệu đó xuống các thiết bị chấp hành. ![example](Ảnh4.png)
++) Điều khiển bật/tắt đèn: Nhóm em sẽ điều khiển thông qua các nút nhấn có trên App với chức năng khi nút nhấn được nhấn sẽ gửi dữ liệu xuống Firebase rồi sau đó Firebase sẽ gửi dữ liệu đó xuống các thiết bị chấp hành. 
+![example](Ảnh4.png)
 +) Điều khiển quạt/rèm: Ở đây nhóm em sẽ điều khiển thông qua thanh trượt có tên “Slider” trên App. Tương tự như nút nhấn, nếu giá trị thanh trượt thay đổi thì sẽ gửi dữ liệu đó về Firebase và Firebase sẽ gửi xuống các thiết bị chấp hành. 
 +) Ví dụ như ở đây nhóm em đang cho Rèm có 3 mức là 0/1/2 tương ứng với 3 kịch bản là OFF/ON1/ON2. Trong đó ON1 là mở 50% và ON2 là mở 100%. 
 
@@ -185,10 +187,7 @@ const char index_html[] PROGMEM = R"rawliteral(
 <!DOCTYPE HTML><html>
 <head>
 ```
- 
-Hàm response file index_html cho Web Client
-
-
+Hàm response file index_html cho Web Client:
   ![example](Ảnh11.png)
 Giao diện từ file html khi truy cập địa chỉ IP của ESP32: 192.168.0.117
 
