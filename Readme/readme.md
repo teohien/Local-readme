@@ -208,7 +208,8 @@ Hàm response file index_html cho Web Client:
 
 ![example](Ảnh11.png)
 
-Giao diện từ file html khi truy cập địa chỉ IP của ESP32: 192.168.0.117
+Giao diện từ file html khi truy cập địa chỉ IP của ESP32: 192.168.0.117.
+
 **Điều khiển từ Web Server ESP32**
 “Làm cách nào để điều khiển từ một Web Server chỉ đơn thuần xử lý và cung cập các trang web?” Vậy thì chúng ta cần hiểu những gì khi client và server giao tiếp với nhau.
 Khi nhập URL vào trình duyệt Web và nhấn Enter, trình duyệt sẽ gửi một HTTP Request (còn gọi là Get Request) đến Web Server. Công việc của Web Server là xử lý yêu cầu này bằng cách làm 1 cái gì đó. Có thể dễ hình dung ra rằng chúng ta sẽ điều khiển bằng cách truy cập vào một URL cụ thể. Ví dụ: chúng ta sẽ đã nhập một URL như http://192.168.2.54/ledon trong trình duyệt. Sau đó, trình duyệt sẽ gửi một HTTP Request đến ESP32 để xử lý yêu cầu này. Khi ESP32 đọc yêu cầu này, chúng ta sẽ viết một hàm muốn bật led ngay trong hàm xử lý của ESP32 Web Server. Vì vậy, nó sẽ bật led và đồng thời gửi một trang web đến một trình duyệt hiển thị trạng thái led: on.
@@ -217,6 +218,7 @@ Hàm điều khiển sẽ xảy ra đồng thời khi Web Server vừa nhận đ
  ![example](Ảnh12.png)
 
 **6.1.2 AJAX**
+
 AJAX là chữ viết tắt của Asynchronous JavaScript and XML, AJAX = Asynchronous JavaScript and XML. Đây là một công nghệ giúp chung ta tạo ra những Web động mà hoàn toàn không reload lại trang nên rất mượt và đẹp. Vậy Asynchronous, JavaScript, XML trong từ AJAX là gì:
 +) Asynchronous, hay nói ngắn hơn là Async – bất đồng bộ. Bất đồng bộ có nghĩa là một chương trình có thể xử lý không theo tuần tự các hàm. Sẽ không có quy trình, có thể nhảy đi bỏ qua bước nào đó. Ích lợi dễ thấy nhất của bất đồng bộ là chương trình có thể xử lý nhiều công việc một lúc.
 +) JavaScript là một ngôn ngữ lập trình nổi tiếng. Trong số rất nhiều chức năng của nó là khả năng quản lý nội dung động của website và hỗ trợ tương tác với người dùng.
