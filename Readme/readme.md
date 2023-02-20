@@ -23,7 +23,7 @@ Restart lại VS code sau đó chờ cho tất cả các extension được load
 **Lưu ý:** máy tính bạn cần phải có mạng nhé.
 ## Cài đặt Driver nạp cho mạch.
 Tùy vào trường hợp mạch bạn sử dụng IC UART nào, chúng ta sẽ cài đặt driver cho chip đó:
-Thường là 2 loại
+Thường là 2 loại:
 CP210x: [Link download và cài đặt](https://sparks.gogo.co.nz/ch340.html).
 CH340:  [Link download và cài đặt](https://sparks.gogo.co.nz/ch340.html).
 ## Hướng dẫn sử dụng Platform IO lập trình ESP32
