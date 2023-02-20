@@ -131,4 +131,4 @@ Serial trên Adrunino có chế độ **Show Timestamp** để hiển thị th�
 ![example](serialcom5.png)
 
 # II. Triển khai dự án
-## 1. Sơ đồ chân Endnode nè
+## 1. Sơ đồ chân Endnode
