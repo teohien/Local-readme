@@ -121,6 +121,7 @@ Vậy là bạn có thể truyền nhận dữ liệu thông qua cổng COM rồ
 Bạn sẽ được chuyển đến một trang mời quyền góp tiền để phát triển phần mềm cho Arduino, tiếp tục bấm **JUST DOWNLOAD** để bắt đầu tải.
 ![example](1394_12320-1431420084-0-2015-05-12-21h46-45-701x400.png)
 - **Bước 2:** Sau khi download xong, các bạn bấm chuột phải vào file vừa **download arduino-1.6.4-windows.zip** và chọn **“Extract here”** để giải nén.
+
 ![example](1364_88220-1431517904-0-2015-05-13-18h50-56-411x400.png)
 
 - **Bước 3:** Copy thư mục arduino-1.6.4 vừa giải nén đến nơi lưu trữ.
