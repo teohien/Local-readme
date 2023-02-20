@@ -180,8 +180,8 @@ Nhóm em sẽ sử dụng App để phục vụ hai chức năng chính của h�
 ![example](Ảnh6.png)
 
 ## 6. Điều khiển Local
-## 6.1 Cơ sở lý thuyết
-## 6.1.1 Web Server
+### 6.1 Cơ sở lý thuyết
+#### 6.1.1 Web Server
 Web Server là nơi lưu trữ, xử lý và cung cấp các trang web đến các Web Client. Web Client là một trình duyệt trên Laptop và Smartphone. Giao tiếp giữa Client và Server diễn ra bằng 1 giao thức đặc biệt gọi là Giao thức truyền siêu văn bản (HTTP- Hypertext Transfer Protocol).
 
 ![example](Ảnh9.png)
@@ -191,6 +191,7 @@ Cụ thể hơn sẽ là như thế này:
 ![example](Ảnh10.png)
 
 Trong giao thức này, client bắt đầu giao tiếp bằng các đưa ra yêu cầu cho một trang web cụ thể bằng HTTP request và máy chủ phản hồi bằng nội dung của trang web đó hoặc thông báo lỗi nếu không thể thực hiện được (ví dụ như Error 404 not Found). Các trang do máy chủ phân phối chủ yếu là HTML.
+
 Để dễ hình dung, khi có một client truy cập vào địa chỉ IP của webserver thì browser sẽ gửi cho server một http request (ứng với GET trong code). Ngay khi nhận được request này server sẽ gửi lại một http response (ứng với request->send trong code) có chứa nội dung là file html: index_html của webserver. 
 ```c
 server.on("/", HTTP_GET, [](AsyncWebServerRequest *request){
@@ -211,17 +212,21 @@ Hàm response file index_html cho Web Client:
 Giao diện từ file html khi truy cập địa chỉ IP của ESP32: 192.168.0.117.
 
 **Điều khiển từ Web Server ESP32**
+
 “Làm cách nào để điều khiển từ một Web Server chỉ đơn thuần xử lý và cung cập các trang web?” Vậy thì chúng ta cần hiểu những gì khi client và server giao tiếp với nhau.
 Khi nhập URL vào trình duyệt Web và nhấn Enter, trình duyệt sẽ gửi một HTTP Request (còn gọi là Get Request) đến Web Server. Công việc của Web Server là xử lý yêu cầu này bằng cách làm 1 cái gì đó. Có thể dễ hình dung ra rằng chúng ta sẽ điều khiển bằng cách truy cập vào một URL cụ thể. Ví dụ: chúng ta sẽ đã nhập một URL như http://192.168.2.54/ledon trong trình duyệt. Sau đó, trình duyệt sẽ gửi một HTTP Request đến ESP32 để xử lý yêu cầu này. Khi ESP32 đọc yêu cầu này, chúng ta sẽ viết một hàm muốn bật led ngay trong hàm xử lý của ESP32 Web Server. Vì vậy, nó sẽ bật led và đồng thời gửi một trang web đến một trình duyệt hiển thị trạng thái led: on.
 Hàm điều khiển sẽ xảy ra đồng thời khi Web Server vừa nhận được HTTP Request và đang trả về HTTP Response.
 
  ![example](Ảnh12.png)
 
-**6.1.2 AJAX**
+#### 6.1.2 AJAX
 
 AJAX là chữ viết tắt của Asynchronous JavaScript and XML, AJAX = Asynchronous JavaScript and XML. Đây là một công nghệ giúp chung ta tạo ra những Web động mà hoàn toàn không reload lại trang nên rất mượt và đẹp. Vậy Asynchronous, JavaScript, XML trong từ AJAX là gì:
+
 +) Asynchronous, hay nói ngắn hơn là Async – bất đồng bộ. Bất đồng bộ có nghĩa là một chương trình có thể xử lý không theo tuần tự các hàm. Sẽ không có quy trình, có thể nhảy đi bỏ qua bước nào đó. Ích lợi dễ thấy nhất của bất đồng bộ là chương trình có thể xử lý nhiều công việc một lúc.
+
 +) JavaScript là một ngôn ngữ lập trình nổi tiếng. Trong số rất nhiều chức năng của nó là khả năng quản lý nội dung động của website và hỗ trợ tương tác với người dùng.
+
 +) XML là một dạng của ngôn ngữ markup như HTML, chữ đầy đủ của nó là eXtensible Markup Language. Nếu HTML được dùng để hiển thị dữ liệu, XML được thiết kế để chứa dữ liệu.
 
   ![example](Ảnh13.png)
@@ -229,7 +234,7 @@ AJAX là chữ viết tắt của Asynchronous JavaScript and XML, AJAX = Asynch
 Ajax là cách mà chúng ta xử lý dữ liệu tại một số phần nhỏ trên ứng dụng web mà không cần phải load lại toàn bộ trang web
 Cả JavaScript và XML đều hoạt động bất đồng bộ trong AJAX. **Kết quả là, nhiều ứng dụng web có thể sử dụng AJAX để gửi và nhận data từ server mà không phải toàn bộ trang.**
 
-**6.1.3 Nút nhấn**
+#### 6.1.3 Nút nhấn
 Xây dựng hàm xử lý khi nhấn nút và chống nhiễu: 
 ```c
 void loop() {
@@ -332,9 +337,12 @@ server.on("/slider", HTTP_GET, [] (AsyncWebServerRequest *request) {
     request->send(200, "text/plain", "OK");
   });
 ```
-**6.2 Web Server điều khiển Local**
+### 6.2 Web Server điều khiển Local
+
 Phòng khách sẽ bao gồm nhiệt độ, độ ẩm đo được từ cảm biến DHT11, thanh trượt điều khiển tốc độ quạt từ 0 – 10, nút nhấn điều khiển và hiển thị trạng thái đèn trên Web.
+
 Điều khiển trực tiếp có nút nhấn cứng để điều khiển đèn, trạng thái đèn khi điều khiển bằng nút nhấn sẽ được đồng bộ lên Web Server.
+
 Nhiệt độ, độ ẩm sẽ được cập nhật tự động 10s 1 lần, trạng thái Led và quạt hiển thị đúng với thực tế.
 
  ![example](Ảnh14.png)
@@ -346,4 +354,5 @@ Nhiệt độ, độ ẩm sẽ được cập nhật tự động 10s 1 lần, t
  Đèn đang tắt, nút nhấn hiển thị trạng thái đang tắt, State: Off
 
 Sử dụng **kỹ thuật Ajax** để chỉ cập nhật những thành phần thay đổi của dữ liệu thay vì tải lại cả trang.
+
 Khi thao tác với nút nhấn cứng, trên web chỉ có trạng thái của nút nhấn và dòng chữ sau LIGHT BULB – State thay đổi từ On sang Off, còn trạng thái quạt không đổi, tên miền vẫn là **192.168.254**
