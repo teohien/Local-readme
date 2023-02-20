@@ -21,13 +21,13 @@ Nhấn cài đặt, sau khi cài đặt xong sẽ hiển thị như hình:
 
 Restart lại VS code sau đó chờ cho tất cả các extension được load.
 **Lưu ý:** máy tính bạn cần phải có mạng nhé.
-##Cài đặt Driver nạp cho mạch.
+## Cài đặt Driver nạp cho mạch.
 Tùy vào trường hợp mạch bạn sử dụng IC UART nào, chúng ta sẽ cài đặt driver cho chip đó:
 Thường là 2 loại
-CP210x: [Link download và cài đặt](https://sparks.gogo.co.nz/ch340.html)
-CH340:  [Link download và cài đặt](https://sparks.gogo.co.nz/ch340.html)
-##Hướng dẫn sử dụng Platform IO lập trình ESP32
-Tạo một dự án lập trình ESP32 với Platform io
+CP210x: [Link download và cài đặt](https://sparks.gogo.co.nz/ch340.html).
+CH340:  [Link download và cài đặt](https://sparks.gogo.co.nz/ch340.html).
+## Hướng dẫn sử dụng Platform IO lập trình ESP32
+Tạo một dự án lập trình ESP32 với Platform IO.
 Chúng ta nhấn vào biểu tượng logo của Platform io, trong tab Quick Acccess nhấn Open. Vs code sẽ mở ra trang PIO Home.
 Sau đó nhân vào New Project để tạo 1 dự án mới
 Đặt tên dự án, Chọn KIT sử dụng, ở đây là board DOIT ESP32 DEV KIT (loại thường gặp nhất đó).
