@@ -131,4 +131,20 @@ Serial trên Adrunino có chế độ **Show Timestamp** để hiển thị th�
 ![example](serialcom5.png)
 
 # II. Triển khai dự án
-## 1. Sơ đồ chân Endnode
+## 1. Sơ đồ chân 
+**Endnode**  
+| lora sx1278  | esp32  |
+|:---:|:---:|
+|3.3V|3.3V   |
+| GND  |GND   |
+| NSS|D5   |
+| DIDO  |D2   |
+| SCK  |D18   |
+| MISO  |D19   |
+| MOSI  |D23   |
+| RST  |D14   |
+| Data DS18B20 |D13   |
+| Chân nút nhấn  |  D15 |
+|  Led xanh |D25   |
+|  Led vàng |D26   |
+|  Led đỏ |D27 |
