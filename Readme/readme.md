@@ -12,13 +12,13 @@ Trước khi cài Extension này, chúng ta cần cài đặt Python cho máy t�
 
 ![example](1-python.png)
 
-Truy cập link: https://www.python.org/downloads/
-**Lưu ý**: Hãy tích chọn Add Python 3.8 to PATH để có thể run Python ở bất cứ đâu.
+Truy cập link: https://www.python.org/downloads/.  
+
+**Lưu ý**: Hãy tích chọn Add Python 3.8 to PATH để có thể run Python ở bất cứ đâu.  
 Sau đó mở VS code, chuyển đến tab Extension, trong ô tìm kiếm gõ **Platformio IDE**.
 Nhấn cài đặt, sau khi cài đặt xong sẽ hiển thị như hình:
 
-![example](download-platform.png)
-
+![example](download-platform.png)  
 Restart lại VS code sau đó chờ cho tất cả các extension được load.
 **Lưu ý:** máy tính bạn cần phải có mạng nhé.
 ## Cài đặt Driver nạp cho mạch.
