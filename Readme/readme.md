@@ -131,6 +131,7 @@ Bạn sẽ được chuyển đến một trang mời quyền góp tiền để 
 **Bước 4:** Chạy file cài đặt trong thư mục arduino để cài đặt Arduino IDE và khởi động nó lên. 
 
 ![example](1398_12320-1431518163-0-2015-05-13-18h55-51-333x400.png)
+
 Như vậy chúng ta đã cài đặt Arduino IDE xong.
 
 **Cài đặt Serial**
@@ -142,11 +143,11 @@ Serial trên Adrunino có chế độ **Show Timestamp** để hiển thị th�
 
 ![example](serialcom5.png)
 
-#II. Triển khai dự án
-##1. End Devices
-##2. Gateway
-##3. Firebase
-##4. Triển khai Gateway để truyền nhận dữ liệu tương tác với Firebase
+# II. Triển khai dự án
+## 1. End Devices
+## 2. Gateway
+## 3. Firebase
+## 4. Triển khai Gateway để truyền nhận dữ liệu tương tác với Firebase
 ##5. Triển khai App MIT Inventor để đọc và gửi dữ liệu tương tác với Firebase
 Nhóm em sẽ sử dụng App để phục vụ hai chức năng chính của hệ thống: 
 . Chức năng hiển thị trạng thái của Đèn và một số kịch bản như hiển thị nhiệt độ, trạng thái của cảm biến hồng ngoại, …
@@ -178,9 +179,9 @@ Nhóm em sẽ sử dụng App để phục vụ hai chức năng chính của h�
 
 ![example](Ảnh6.png)
 
-##6. Điều khiển Local
-##6.1 Cơ sở lý thuyết
-##6.1.1 Web Server
+## 6. Điều khiển Local
+## 6.1 Cơ sở lý thuyết
+## 6.1.1 Web Server
 Web Server là nơi lưu trữ, xử lý và cung cấp các trang web đến các Web Client. Web Client là một trình duyệt trên Laptop và Smartphone. Giao tiếp giữa Client và Server diễn ra bằng 1 giao thức đặc biệt gọi là Giao thức truyền siêu văn bản (HTTP- Hypertext Transfer Protocol).
 
 ![example](Ảnh9.png)
@@ -215,7 +216,7 @@ Hàm điều khiển sẽ xảy ra đồng thời khi Web Server vừa nhận đ
 
  ![example](Ảnh12.png)
 
-**13.1.2 AJAX**
+**6.1.2 AJAX**
 AJAX là chữ viết tắt của Asynchronous JavaScript and XML, AJAX = Asynchronous JavaScript and XML. Đây là một công nghệ giúp chung ta tạo ra những Web động mà hoàn toàn không reload lại trang nên rất mượt và đẹp. Vậy Asynchronous, JavaScript, XML trong từ AJAX là gì:
 +) Asynchronous, hay nói ngắn hơn là Async – bất đồng bộ. Bất đồng bộ có nghĩa là một chương trình có thể xử lý không theo tuần tự các hàm. Sẽ không có quy trình, có thể nhảy đi bỏ qua bước nào đó. Ích lợi dễ thấy nhất của bất đồng bộ là chương trình có thể xử lý nhiều công việc một lúc.
 +) JavaScript là một ngôn ngữ lập trình nổi tiếng. Trong số rất nhiều chức năng của nó là khả năng quản lý nội dung động của website và hỗ trợ tương tác với người dùng.
@@ -226,7 +227,7 @@ AJAX là chữ viết tắt của Asynchronous JavaScript and XML, AJAX = Asynch
 Ajax là cách mà chúng ta xử lý dữ liệu tại một số phần nhỏ trên ứng dụng web mà không cần phải load lại toàn bộ trang web
 Cả JavaScript và XML đều hoạt động bất đồng bộ trong AJAX. **Kết quả là, nhiều ứng dụng web có thể sử dụng AJAX để gửi và nhận data từ server mà không phải toàn bộ trang.**
 
-**13.1.3 Nút nhấn**
+**6.1.3 Nút nhấn**
 Xây dựng hàm xử lý khi nhấn nút và chống nhiễu: 
 ```c
 void loop() {
@@ -255,7 +256,7 @@ void loop() {
   lastButtonState = reading;
 }
 ```
-**13.1.4 Một số đoạn code quan trọng**
+**6.1.4 Một số đoạn code quan trọng**
 **a) Đồng bộ trạng thái đèn**
 - Hàm gửi yêu cầu GET (http request) cập nhật trạng thái đèn 1s một lần vào URL “/state” từ Web Client
 ```cpp
@@ -329,7 +330,7 @@ server.on("/slider", HTTP_GET, [] (AsyncWebServerRequest *request) {
     request->send(200, "text/plain", "OK");
   });
 ```
-**13.2 Web Server điều khiển Local**
+**6.2 Web Server điều khiển Local**
 Phòng khách sẽ bao gồm nhiệt độ, độ ẩm đo được từ cảm biến DHT11, thanh trượt điều khiển tốc độ quạt từ 0 – 10, nút nhấn điều khiển và hiển thị trạng thái đèn trên Web.
 Điều khiển trực tiếp có nút nhấn cứng để điều khiển đèn, trạng thái đèn khi điều khiển bằng nút nhấn sẽ được đồng bộ lên Web Server.
 Nhiệt độ, độ ẩm sẽ được cập nhật tự động 10s 1 lần, trạng thái Led và quạt hiển thị đúng với thực tế.
