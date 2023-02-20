@@ -6,7 +6,7 @@
 [Link hướng dẫn chi tiết](https://khuenguyencreator.com/huong-dan-cai-dat-platform-io-lap-trinh-esp32/)
 ## Cài đặt Visual Studio Code (VS Code)
 Truy cập link: https://code.visualstudio.com/
-Download và Cài đặt như một software bình thường.
+-- Download và Cài đặt như một software bình thường.
 ## Cài đặt Platform IO
 -- Trước khi cài Extension này, chúng ta cần cài đặt Python cho máy tính đã.
 
@@ -33,12 +33,11 @@ Chọn Framwork là Arduino:
 
 ![example](3-adruino.jpg)
 
-Bỏ tick Use Defaul Location, sau đó trỏ tới nơi bạn lưu project, nhấn Finish để hoàn thành.
+-- Bỏ tick Use Defaul Location, sau đó trỏ tới nơi bạn lưu project, nhấn Finish để hoàn thành.  
 
-![example](4-location.jpg)
+![example](4-location.jpg)  
 
-Giao diện lập trình của Platform IO.
-Sau khi project được tạo, giao diện như sau:
+-- Sau khi project được tạo, giao diện như sau:  
 
 ![example](platformio-4-742x400.jpg)
 
@@ -53,8 +52,7 @@ Phần Text editor: là nơi viết code
 -- Trên thực tế, các bạn có thể Copy trực tiếp các đoạn code viết bằng Arduino IDE và Paste thẳng vào đây. Chỉ cần giữ **#include <Arduino.h>** là code cũng có thể chạy bình thường. Thế nên các dự án mà bạn viết bằng Arduino cũng đều có thể viết bằng VS code nhé.   
 -- File platformio.ini là file cấu hình PlatformIO cho project của bạn. Nó hiển thị các thông tin như platform, board và framework được sử dụng. Bạn cũng có thể thêm các cấu hình khác như các thư viện được đưa vào, tùy chọn upload code, hay tốc độ truyền của Serial Monitor, đường dẫn thư viện và các cấu hình khác. Thực tế các bạn nên để nguyên.  
 -- Nếu muốn thay đổi tốc độ baud của Serial Monitor có thể sử dụng lệnh: **monitor_speed = 115200**.  
--- Nếu muốn thêm đường dẫn của thư viện chúng ta dùng: lib_deps = E:/thuvien   
-Trong đó E:/thuvien là đường dẫn tới file thư viện bạn cài đặt  
+-- Nếu muốn thêm đường dẫn của thư viện chúng ta dùng: lib_deps = E:/thuvien. Trong đó E:/thuvien là đường dẫn tới file thư viện bạn cài đặt.    
 ## Cài đặt thư viện cho Platformio   
 ### Sử dụng công cụ Libraly trong Platformio  
 - Làm theo quy trình dưới đây nếu bạn cần cài đặt thư viện trong PlatformIO IDE.  
